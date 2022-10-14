@@ -7,6 +7,7 @@ function Users() {
     const [users, setUsers] = useState([]);
     const [isLoading, setLoading] = useState(false)
 
+    
     useEffect(() => {
         loadData()
     }, [])
