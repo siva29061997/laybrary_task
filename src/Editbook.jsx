@@ -45,7 +45,7 @@ function Edituser() {
           return errors
         },
         onSubmit: async (values) => {
-         await axios.put(`https://6300faaee71700618a325118.mockapi.io/api/v1/users/${params.id}`,values)
+         await axios.put(`https://school-01.herokuapp.com/book/${params.id}`,values)
          alert("Saccessful Edit For User")
          navigate("/portal/users")
         },
@@ -57,7 +57,7 @@ function Edituser() {
 
        let loadUser = async ()=>{
          try {
-         let user = await axios.get(`https://6300faaee71700618a325118.mockapi.io/api/v1/users/${params.id}`)
+         let user = await axios.get(`https://school-01.herokuapp.com/book/${params.id}`)
          formik.setValues({
           name: user.data.name,
           position: user.data.position,

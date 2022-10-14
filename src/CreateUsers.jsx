@@ -15,19 +15,19 @@ function CreateUsers() {
     validate: (values)=>{
       let errors = {};
        
-      if(values.name == "" ){
+      if(values.name ==="" ){
         errors.name = "*Please enter name"
       }
       if(values.name.length <= 3){
         errors.name = "*Please enter greter then 3"
       }
-      if(values.position == ""){
+      if(values.position === ""){
         errors.position = "*Please enter position"
       }
-      if(values.office == ""){
+      if(values.office ===""){
         errors.office = "*Please enter office name"
       }
-      if(values.age == ""){
+      if(values.age === ""){
         errors.age = "*Please enter age"
       }
       if(values.age.length <= 1){
@@ -42,7 +42,7 @@ function CreateUsers() {
       return errors
     },
     onSubmit: async (values) => {
-    let user = await axios.post("https://6300faaee71700618a325118.mockapi.io/api/v1/users",values)
+    let user = await axios.post("https://school-01.herokuapp.com/user",values)
     alert("user created")
     }, 
   })

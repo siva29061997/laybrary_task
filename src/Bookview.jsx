@@ -18,7 +18,7 @@ function Userview() {
 
       let loadUser = async ()=>{
           try {
-          let user = await axios.get(`https://school-01.herokuapp.com/user/${params.id}`)
+          let user = await axios.get(`https://school-01.herokuapp.com/book/${params.id}`)
           setUseData(user.data)
           } catch (error) {
             

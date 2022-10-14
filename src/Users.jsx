@@ -14,7 +14,7 @@ function Users() {
 
     let loadData = async () => {
         setLoading(true)
-        let users = await axios.get("https://6300faaee71700618a325118.mockapi.io/api/v1/users");
+        let users = await axios.get("https://school-01.herokuapp.com/users");
         console.log(users)
         setUsers(users.data)
         setLoading(false)
@@ -24,7 +24,7 @@ function Users() {
         try {
             let ask = window.confirm("Are you sure? Do you want to delete this data?");
             if (ask) {
-                await axios.delete(`https://6300faaee71700618a325118.mockapi.io/api/v1/users/${id}`)
+                await axios.delete(`https://school-01.herokuapp.com/user/${id}`)
                 loadData()
             }
 
@@ -85,9 +85,9 @@ function Users() {
                                                 <td>{user.statDate}</td>
                                                 <td>${user.salary}</td>
                                                 <td>
-                                                    <Link to={`/portal/users/${user.id}`} className='btn btn-sm btn-primary mr-1'>View</Link>
-                                                    <Link to={`/portal/user/edit/${user.id}`} className='btn btn-sm btn-success mr-1'>Edite</Link>
-                                                    <button onClick={() => userDelete(user.id)} className='btn btn-sm btn-danger mr-1'>Delete</button>
+                                                    <Link to={`/portal/users/${user._id}`} className='btn btn-sm btn-primary mr-1'>View</Link>
+                                                    <Link to={`/portal/user/edit/${user._id}`} className='btn btn-sm btn-success mr-1'>Edite</Link>
+                                                    <button onClick={() => userDelete(user._id)} className='btn btn-sm btn-danger mr-1'>Delete</button>
                                                 </td>
 
                                             </tr>

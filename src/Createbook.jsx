@@ -42,7 +42,7 @@ function CreateUsers() {
       return errors
     },
     onSubmit: async (values) => {
-    let user = await axios.post("https://6300faaee71700618a325118.mockapi.io/api/v1/users",values)
+    let user = await axios.post("https://school-01.herokuapp.com/book",values)
     alert("user created")
     }, 
   })

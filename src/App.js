@@ -14,6 +14,7 @@ import Createbook from './Createbook';
 import Login from './Login';
 import Portal from './Portal';
 import Userview from './Userview';
+import Bookview from './Bookview';
 import Edituser from './Edituser';
 import Editbook from './Editbook';
 
@@ -28,9 +29,10 @@ function App() {
           <Route path="dashbord" element={<Dashbord />} />
           <Route path="users" element={<Users />} />
           <Route path="users/:id" element={<Userview />} />
+          <Route path="products/:id" element={<Bookview />} />
           <Route path="user/edit/:id" element={<Edituser />} />
           <Route path="products" element={<Products />} />
-          <Route path="user/edit/:id" element={<Editbook />} />
+          <Route path="product/edit/:id" element={<Editbook />} />
           <Route path="create-users" element={<CreateUsers />} />
           <Route path="createbook" element={<Createbook />} />
         </Route>
